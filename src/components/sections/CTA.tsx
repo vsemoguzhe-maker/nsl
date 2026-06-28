@@ -38,7 +38,7 @@ export function CTA() {
             <span>✓ Сертификат по окончании</span>
             <span>✓ Возможна рассрочка</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center flex-wrap">
             <button
               onClick={() => setIsModalOpen(true)}
               className="hover-trigger relative inline-flex items-center justify-center px-12 py-5 bg-terracotta text-white text-[11px] tracking-[0.15em] uppercase font-medium overflow-hidden group"
@@ -47,7 +47,15 @@ export function CTA() {
               <span className="relative z-10">Записаться на консультацию</span>
             </button>
             <a
-              href="https://instagram.com/"
+              href="https://t.me/NS_talks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-trigger inline-flex items-center justify-center px-12 py-5 border border-terracotta text-terracotta text-[11px] tracking-[0.15em] uppercase font-medium hover:bg-terracotta hover:text-white transition-colors duration-300"
+            >
+              Наш Telegram
+            </a>
+            <a
+              href="https://www.instagram.com/ns.isaeva?igsh=MTNua2hwcXV3YzY4aQ=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover-trigger inline-flex items-center justify-center px-12 py-5 border border-terracotta text-terracotta text-[11px] tracking-[0.15em] uppercase font-medium hover:bg-terracotta hover:text-white transition-colors duration-300"

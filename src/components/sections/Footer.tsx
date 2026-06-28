@@ -34,12 +34,12 @@ export function Footer() {
           </a>
         </li>
         <li>
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
+          <a href="https://t.me/NS_talks" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
             Telegram
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
+          <a href="https://www.instagram.com/ns.isaeva?igsh=MTNua2hwcXV3YzY4aQ==" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
             Instagram
           </a>
         </li>
