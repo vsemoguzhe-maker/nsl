@@ -17,6 +17,7 @@ export function Navbar() {
   const navLinks = [
     { name: 'О курсе', href: '#about' },
     { name: 'Программы', href: '#program' },
+    { name: 'Спектакли', href: '#performances' },
     { name: 'Мастера', href: '#masters' },
     { name: 'Контакты', href: '#join' },
   ];

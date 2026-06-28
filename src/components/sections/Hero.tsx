@@ -3,7 +3,12 @@ import { Stamp } from '../ui/Stamp';
 
 export function Hero() {
   return (
-    <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2 relative overflow-hidden bg-cream">
+    <section className="min-h-screen flex flex-col lg:grid lg:grid-cols-12 relative overflow-hidden bg-cream border-b border-mist/50">
+      {/* Decorative vertical lines for magazine grid feel */}
+      <div className="hidden lg:block absolute top-0 bottom-0 left-1/4 w-px bg-mist/20 z-0"></div>
+      <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 w-px bg-mist/20 z-0"></div>
+      <div className="hidden lg:block absolute top-0 bottom-0 right-1/4 w-px bg-mist/20 z-0"></div>
+
       {/* Stamp / Logo Float */}
       <motion.div 
         className="absolute top-32 left-6 lg:left-12 z-20 w-24 h-24 hidden md:block opacity-40 mix-blend-multiply"
@@ -14,7 +19,7 @@ export function Hero() {
       </motion.div>
 
       {/* Left Column */}
-      <div className="flex flex-col justify-end px-6 py-32 lg:px-16 lg:pb-24 pt-48 relative z-10 bg-cream">
+      <div className="lg:col-span-6 flex flex-col justify-end px-6 pt-32 pb-16 lg:px-16 lg:pb-24 lg:pt-48 relative z-10 bg-cream">
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +27,7 @@ export function Hero() {
           className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-terracotta font-medium mb-6 flex items-center gap-4"
         >
           <span className="w-8 h-px bg-terracotta"></span>
-          Курс актёрского мастерства
+          Авторский курс актёрского мастерства и публичной речи
         </motion.p>
         
         <motion.h1
@@ -41,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="text-[15px] leading-relaxed text-ink/70 max-w-[380px] font-light mb-12 text-balance"
         >
-          Театральная глубина встречается с силой публичной речи. Позволь себе сбыться и говорить так, чтобы тебя слышали.
+          Методика на основе театральных техник и алгоритмов ораторского искусства — для тех, кто хочет говорить убедительно и оставаться собой.
         </motion.p>
 
         <motion.div
@@ -56,23 +61,26 @@ export function Hero() {
           >
             <span className="absolute inset-0 w-full h-full bg-ink transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
             <span className="relative z-10 flex items-center gap-2">
-              Выбрать курс
+              Узнать о программе
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
             </span>
             {/* Corner creative cuts */}
             <span className="absolute top-0 right-0 w-3 h-3 bg-cream transform translate-x-1.5 -translate-y-1.5 rotate-45 z-20"></span>
             <span className="absolute bottom-0 left-0 w-3 h-3 bg-cream transform -translate-x-1.5 translate-y-1.5 rotate-45 z-20"></span>
           </a>
-          <p className="text-[12px] text-ink/50 tracking-[0.05em] italic font-serif">
-            Старт — 15 июня
-          </p>
+          <div className="flex flex-col">
+            <p className="text-[12px] text-ink/50 tracking-[0.05em] italic font-serif">
+              Старт — 15 июня
+            </p>
+            <p className="text-[11px] text-ink/40 tracking-[0.05em] font-sans mt-2">Более 200 выпускников · Очный формат · Старт 15 июня</p>
+          </div>
         </motion.div>
       </div>
 
       {/* Right Column / Visual */}
-      <div className="relative min-h-[50vh] lg:min-h-screen bg-ink overflow-hidden border-l border-ink/10">
+      <div className="lg:col-span-6 relative min-h-[50vh] lg:min-h-screen bg-ink overflow-hidden border-l border-mist/30">
         <div className="absolute inset-0">
-          <img src="/isaeva_hero.jpg" alt="Надежда Исаева" className="w-full h-full object-cover object-center filter contrast-[1.05] opacity-80 mix-blend-luminosity" />
+          <img src="/isaeva_hero.jpg" alt="Надежда Исаева" className="w-full h-full object-cover object-center opacity-90" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80" />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-ink/40" />
         </div>

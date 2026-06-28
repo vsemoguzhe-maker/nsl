@@ -12,24 +12,25 @@ export function Footer() {
           <span>Жизнь <em className="italic text-terracotta pr-1">Игра</em></span>
         </p>
         <p className="font-serif italic text-white/30 text-[13px]">
-          Школа актёрского мастерства и речи
+          Авторская театральная студия Надежды Исаевой
         </p>
+        <p className="font-sans text-white/20 text-[11px] tracking-widest mt-1">Методика на основе системы Станиславского</p>
       </div>
 
       <ul className="flex flex-wrap justify-center gap-6 lg:gap-10 relative z-10">
         <li>
           <a href="#program" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
-            ЖИ.СТАРТ
+            ЖизньИгра.СТАРТ
           </a>
         </li>
         <li>
           <a href="#program" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
-            ЖИ.РЕЧЬ
+            ЖизньИгра.РЕЧЬ
           </a>
         </li>
         <li>
           <a href="#program" className="text-[10px] tracking-[0.15em] uppercase text-white/40 hover:text-terracotta transition-colors font-medium hover-trigger">
-            ЖИ.ПРО
+            ЖизньИгра.ПРО
           </a>
         </li>
         <li>

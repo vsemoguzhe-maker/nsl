@@ -11,8 +11,9 @@ import { Tariffs } from './components/sections/Tariffs';
 import { Masters } from './components/sections/Masters';
 import { CTA } from './components/sections/CTA';
 import { Footer } from './components/sections/Footer';
-import { CustomCursor } from './components/ui/CustomCursor';
 import { Navbar } from './components/ui/Navbar';
+
+import { Teasers } from './components/sections/Teasers';
 
 export default function App() {
   const [isMounted, setIsMounted] = useState(false);
@@ -24,8 +25,7 @@ export default function App() {
   if (!isMounted) return null;
 
   return (
-    <div className="min-h-screen bg-warm-white text-ink overflow-hidden selection:bg-terracotta selection:text-cream">
-      <CustomCursor />
+    <div className="min-h-screen bg-warm-white text-ink overflow-x-hidden selection:bg-terracotta selection:text-cream">
       <Navbar />
       <main>
         <Hero />
@@ -35,6 +35,7 @@ export default function App() {
         <Results />
         <Divider text="программа курса" />
         <Program />
+        <Teasers />
         <Tariffs />
         <About />
         <Masters />

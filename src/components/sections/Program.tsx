@@ -1,53 +1,143 @@
 import { Reveal } from '../ui/Reveal';
+import { motion } from 'motion/react';
 
 const programSteps = [
-  { step: 'Этап I', title: 'Диагностика и зажимы', desc: 'Выявляем телесные и речевые блоки. Учимся расслабляться, правильно дышать и звучать органично.' },
-  { step: 'Этап II', title: 'Техника и мелодика речи', desc: 'Работаем над дикцией, артикуляцией и тембром. Делаем голос сильным, а интонацию — управляемой.' },
-  { step: 'Этап III', title: 'Тело и пространство', desc: 'Учимся владеть собой в пространстве, использовать жесты, управлять вниманием аудитории.' },
-  { step: 'Этап IV', title: 'Своя Игра и Харизма', desc: 'Выходим в публичное поле. Практикуем эмоциональный интеллект, игру чувств и уверенность.' },
+  { step: 'Этап I', title: 'Основы сценического присутствия', desc: 'Работа с внутренней опорой и телесными зажимами. Формирование уверенного публичного состояния через актёрские упражнения.' },
+  { step: 'Этап II', title: 'Вербальное и невербальное', desc: 'Изучаем, как жест, мимика и пластика усиливают или опровергают слово. Практика синхронизации тела и речи.' },
+  { step: 'Этап III', title: 'Управление вниманием аудитории', desc: 'Техники удержания контакта со слушателем. Работа с паузой, взглядом и пространством как инструментами влияния.' },
+  { step: 'Этап IV', title: 'Эмоциональный интеллект на сцене', desc: 'Учимся экологично проживать и управлять эмоциями в публичном пространстве. Этюды, импровизация, разбор.' },
 ];
 
 export function Program() {
   return (
-    <section id="program" className="py-24 lg:py-36 px-6 lg:px-16 bg-warm-white relative">
-      <div className="max-w-4xl mx-auto">
+    <section id="program" className="py-32 lg:py-48 px-6 lg:px-16 bg-warm-white relative overflow-hidden">
+      {/* Asymmetrical background accents */}
+      <div className="absolute top-0 right-0 w-[40vw] h-[60vh] bg-sand/30 rounded-bl-[300px] blur-3xl opacity-60 mix-blend-multiply pointer-events-none" />
+      <div className="absolute top-[30%] -left-64 w-[800px] h-[800px] bg-terracotta/[0.03] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -right-48 w-[40rem] h-[50rem] bg-blush/30 rounded-tl-[400px] blur-3xl mix-blend-multiply pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <Reveal>
-          <div className="text-center mb-24">
-            <p className="text-[10px] tracking-[0.2em] uppercase text-terracotta font-medium mb-6 flex justify-center items-center gap-4">
-              <span className="w-5 h-px bg-terracotta"></span>
-              Структура курса
-              <span className="w-5 h-px bg-terracotta"></span>
-            </p>
-            <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light leading-[1.1]">
-              Сценарий <em className="italic text-terracotta px-1">преображения</em>
+          <div className="mb-32 lg:mb-48 md:ml-24 max-w-2xl relative">
+            <h2 className="font-serif text-[clamp(40px,6vw,72px)] font-light leading-[1.05] relative z-10">
+               Структура <br />
+               <em className="italic text-terracotta relative -left-8 md:-left-16 inline-block mt-4 opacity-90">программы</em>
             </h2>
+            <div className="absolute -top-12 -left-12 text-[120px] lg:text-[200px] font-serif font-light text-ink/[0.03] pointer-events-none z-0">
+               Программа
+            </div>
           </div>
         </Reveal>
 
-        <div className="relative">
-          {/* Main timeline line */}
-          <div className="absolute left-[20px] md:left-1/2 top-4 bottom-8 w-px bg-mist md:-translate-x-1/2" />
-          
-          {programSteps.map((item, i) => (
-            <Reveal key={i} delay={0.2}>
-              <div className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-20 ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                
-                {/* Node */}
-                <div className="absolute left-[20px] md:left-1/2 w-3 h-3 bg-terracotta rounded-full shadow-[0_0_0_6px_var(--color-warm-white)] transform -translate-x-[5px] md:-translate-x-1.5 z-10 top-6 md:top-auto" />
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-16 lg:mt-24 border-t border-l border-mist/50">
+          {programSteps.map((item, i) => {
+             return (
+               <Reveal key={i} delay={i * 0.1}>
+                 <motion.div 
+                   whileHover="hover"
+                   initial="initial"
+                   className="relative h-full border-r border-b border-mist/50 p-8 lg:p-12 bg-warm-white hover:bg-mist/10 transition-colors duration-500 group"
+                 >                   
+                   <div className="relative z-10 h-full">
+                     
+                     {/* Thematic Interactive Visuals */}
+                     {i === 0 && (
+                       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none rounded-xl">
+                         <motion.div
+                           variants={{
+                             initial: { scale: 1, rotate: 0, opacity: 0.1 },
+                             hover: { scale: 1.15, rotate: -5, opacity: 0.25 }
+                           }}
+                           transition={{ duration: 0.8, ease: "easeOut" }}
+                           className="absolute -right-12 bottom-0 w-64 h-64 bg-[#7A1D2F] rounded-tl-[80px] rounded-br-[20px] rounded-tr-[20px] rounded-bl-[20px] mix-blend-multiply"
+                         />
+                         <motion.div
+                           variants={{
+                             initial: { scale: 1, x: 0, opacity: 0.2 },
+                             hover: { scale: 1.1, x: -10, opacity: 0.4 }
+                           }}
+                           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                           className="absolute right-12 bottom-16 w-32 h-32 border-[2px] border-[#7A1D2F] rounded-full"
+                         />
+                       </div>
+                     )}
+                     
+                     {i === 1 && (
+                       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none rounded-xl">
+                         <div className="absolute top-8 right-12 w-48 h-48">
+                           {/* Dark shape */}
+                           <motion.div
+                             variants={{
+                               initial: { scale: 1, borderRadius: "20px", rotate: 45, opacity: 0.05 },
+                               hover: { scale: 1.1, borderRadius: "50px", rotate: 30, opacity: 0.15 }
+                             }}
+                             transition={{ duration: 0.8, ease: "easeOut" }}
+                             className="absolute top-0 right-0 w-32 h-32 bg-[#0B2321] origin-center mix-blend-multiply"
+                           />
+                           {/* Circle Outline */}
+                           <motion.div
+                             variants={{
+                               initial: { scale: 1, x: 0, y: 0, opacity: 0.2 },
+                               hover: { scale: 0.9, x: -10, y: 10, opacity: 0.4 }
+                             }}
+                             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                             className="absolute bottom-0 left-0 w-28 h-28 border-[2px] border-[#7A1D2F] rounded-full"
+                           />
+                         </div>
+                       </div>
+                     )}
 
-                {/* Left/Right content */}
-                <div className={`w-full md:w-1/2 flex ${i % 2 !== 0 ? 'md:justify-start' : 'md:justify-end'} pl-16 md:pl-0`}>
-                  <div className={`max-w-sm ${i % 2 !== 0 ? 'md:pl-10' : 'md:pr-10'}`}>
-                    <p className="font-serif italic text-terracotta text-lg mb-2">{item.step}</p>
-                    <h3 className="font-serif text-2xl lg:text-3xl mb-4 leading-tight">{item.title}</h3>
-                    <p className="text-[15px] text-ink/70 font-light leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-                
-                <div className="hidden md:block w-1/2 pointer-events-none"></div>
-              </div>
-            </Reveal>
-          ))}
+                     {i === 2 && (
+                       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none rounded-xl">
+                         <motion.div 
+                           variants={{
+                             initial: { scale: 1, rotate: 0, opacity: 0.3 },
+                             hover: { scale: 1.15, rotate: 45, opacity: 0.8 }
+                           }}
+                           transition={{ duration: 1.2, ease: "easeOut" }}
+                           className="absolute -right-8 top-12 w-48 h-48"
+                         >
+                           {/* Dotted circle */}
+                           <div className="absolute inset-0 flex items-center justify-center -translate-y-6">
+                              {[...Array(12)].map((_, index) => (
+                                <div 
+                                  key={index}
+                                  className="absolute w-3 h-3 bg-[#7A1D2F] rounded-full"
+                                  style={{
+                                    transform: `rotate(${index * 30}deg) translateY(-40px)`
+                                  }}
+                                />
+                              ))}
+                           </div>
+                           {/* Outline arc */}
+                           <div className="absolute inset-[-10px] w-[calc(100%+20px)] h-[calc(100%+20px)] border-[1px] border-[#7A1D2F] rounded-full clip-half" style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }} />
+                         </motion.div>
+                       </div>
+                     )}
+
+                     {i === 3 && (
+                       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none rounded-xl">
+                         <motion.div
+                           variants={{
+                             initial: { scale: 1, opacity: 0.2, x: 0, y: 0 },
+                             hover: { scale: 1.3, opacity: 0.4, x: 20, y: -20 }
+                           }}
+                           transition={{ duration: 1.2, ease: "easeOut" }}
+                           className="absolute -right-20 -bottom-20 w-[120%] h-[120%] bg-gradient-to-tr from-[#7A1D2F] via-[#0B2321] to-transparent rounded-full mix-blend-multiply filter blur-3xl"
+                         />
+                       </div>
+                     )}
+
+                     <div className="relative z-10">
+                       <p className="font-sans text-[10px] uppercase tracking-widest text-terracotta mb-6">{item.step}</p>
+                       <h3 className="font-serif text-[28px] lg:text-[32px] mb-4 leading-tight">{item.title}</h3>
+                       <p className="text-[16px] text-ink/75 font-light leading-relaxed">{item.desc}</p>
+                     </div>
+                   </div>
+                 </motion.div>
+               </Reveal>
+             )
+          })}
         </div>
       </div>
     </section>
